@@ -7,6 +7,19 @@ class Floor():
         self.vehicles = [Vehicle]
         self.max_levels = levels
 
+    def park_vehicle(self,vehicle:Vehicle):
+        if self.Find_slot()>= vehicle.vehicle_size:
+            print("There are slots available")
+            self.vehicles.append(vehicle) 
+        elif self.Find_slot()< vehicle.vehicle_size:   
+            return False
+        print("There are no Slots available")
+
+    def remove_vehicle(self,vehicle:Vehicle):
+        self.vehicles.remove(vehicle)
+        print("Vehicle removed")
+    
+
     def Find_slot(self):
         #check first for free slot in one row
         avlSlots = self.max_slot_per_row
