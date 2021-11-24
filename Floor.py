@@ -22,6 +22,7 @@ class Floor():
         print("Vehicle removed")
     
 
+    # vriskoume an yparxoun slots
     def Find_slot(self):
         #check first for free slot in one row
         avlSlots = self.max_slot_per_row
