@@ -7,6 +7,7 @@ class Floor():
         self.vehicles = [Vehicle]
         self.max_levels = levels
 
+    # auto to eftiaxe to copilot
     def park_vehicle(self,vehicle:Vehicle):
         if self.Find_slot()>= vehicle.vehicle_size:
             print("There are slots available")
@@ -14,7 +15,8 @@ class Floor():
         elif self.Find_slot()< vehicle.vehicle_size:   
             return False
         print("There are no Slots available")
-
+    
+    # auto to eftiaxe to copilot
     def remove_vehicle(self,vehicle:Vehicle):
         self.vehicles.remove(vehicle)
         print("Vehicle removed")
